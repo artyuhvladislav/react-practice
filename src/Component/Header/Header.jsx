@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from './Logo';
-import Search from './Search';
-import UserSettings from './UserSettings';
+import Logo from './Logo/Logo';
+import Search from './Search/Search';
+import UserSettings from './UserSettings/UserSettings';
 import s from './Header.module.css';
 
 const Header = () => {
