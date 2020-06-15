@@ -1,10 +1,11 @@
 import React from 'react';
+import s from './Search.module.css';
 const Search = () => {
     return (
-        <div className="search-container">
-            <input className="search-field" type="text" />
-            <div className="search-block">
-                <img className="search-block-icon" src="./img/search-icon.png" alt="search-icon" />
+        <div className={s.search}>
+            <input className={s.field} type="text" />
+            <div className={s.iconblock}>
+                <img src="./img/search-icon.png" alt="search-icon" />
             </div>
 
         </div>

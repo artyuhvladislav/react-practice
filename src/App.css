@@ -11,77 +11,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/*======== HEADER COMPONENT ======== */
-.header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  height: 100px;
-  background: #2c2c6a;
-}
 
 
-/* LOGO COMPONENT */
-.logo-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo-title {
-  font-size: 18px;
-  color: #fff;
-  margin-left: 10px;
-}
-.logo-img {
-  width: 50px;
-  height: 50px;
-}
 
 
-/* SEARCH COMPONENT */
-.search-container {
-  display: flex;
-  justify-content: center;
-}
-.search-field {
-  outline: none;
-  border: 0;
-  border-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  width: 300px;
-  height: 30px;
-  padding-left: 15px;
-  color: #fff;
-  background: #1c1e48;
-}
-.search-block {
-  height: 30px;
-  background: #1c1e48;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.search-block-icon {
-  width: 30px;
-  height: 30px;
-  transform: rotate(-90deg);
-}
 
-
-/* USER-SETTINGS COMPONENT */
-.user-settings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-settings-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
- 
-}
-.user-avatar-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}

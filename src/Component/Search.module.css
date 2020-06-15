@@ -1,0 +1,28 @@
+
+.search{
+    display: flex;
+    justify-content: center;
+  }
+  .field {
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 300px;
+    height: 30px;
+    padding-left: 15px;
+    color: #fff;
+    background: #1c1e48;
+  }
+  .iconblock {
+    height: 30px;
+    background: #1c1e48;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .iconblock img{
+    width: 30px;
+    height: 30px;
+    transform: rotate(-90deg);
+  }
