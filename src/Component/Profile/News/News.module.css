@@ -1,0 +1,23 @@
+h2 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+}
+.news {
+    display: flex;
+    justify-content: space-around;
+}
+.itemWrapper {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    align-items: flex-end;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 5px;
+}
+.link {
+    font-size: 10px;
+}
