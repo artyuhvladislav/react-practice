@@ -1,7 +1,16 @@
 .nav {
     background: #2c2c6a;
     color: #fff;
+    
+}
+li {
+    width: 100%;
+    padding: 10px;
 }
 .link {
+    padding: 5px 20px;
+    color: #838493;
+}
+.link.active {
     color: #fff;
 }

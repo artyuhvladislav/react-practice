@@ -1,7 +1,19 @@
-.header {
+.dialogs {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    background: #2c2c6a;
-    grid-area: header;
-  }
+    grid-template-columns: 1fr 1fr;
+}
+.dialogs-items {
+
+}
+.dialog {
+  color: #838493;
+}
+.dialog.active {
+  color: #fff;
+}
+.messages {
+
+}
+.message {
+
+}

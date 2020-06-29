@@ -1,24 +1,25 @@
 import React from 'react';
-import Post from './Post/Post'
+import Post from './Post/Post';
+
 const MyPost = () => {
+    const postData = [
+        {id:1, message:'Hi how are you', likesCount: 12},
+        {id:2, message:'this is my first post', likesCount: 2}           
+    ];
     return (
         <div>
             <div className="container">
                 <img src="" alt="avatar" />
-                <p className="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Obcaecati magnam veritatis corrupti non illum hic ad molestias
-                    nostrum, ea expedita, modi eaque enim eos quia assumenda illo?
-                    Sit, asperiores rem?
-                </p>
+                <textarea className="text"></textarea>
+                <button>New post</button>
                 <div className="icon">
                     <img src="" alt=""/>
                     <img src="" alt=""/>
                     <img src="" alt=""/>
                 </div>
             </div>
-            <Post />
-            <Post />
-            <Post />
+            <Post message={postData[0].message} likesCount={postData[0].likesCount}/>
+            <Post message={postData[1].message} likesCount={postData[1].likesCount}/>
         </div>
     )
 }
