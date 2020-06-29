@@ -2,6 +2,11 @@
 * {
   box-sizing: border-box;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 a {
   text-decoration: none;
 }
@@ -11,8 +16,17 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.app-wrapper {
+  display: grid;
+  grid-template-columns:200px 1fr;
+  grid-template-rows: 100px 1fr;
+ grid-template-areas: "header header"
+                      "nav profile";
+}
 
-
-
+.app-wrapper-content {
+  background: #1c1e48;
+  grid-area: "profile";
+}
 
 
