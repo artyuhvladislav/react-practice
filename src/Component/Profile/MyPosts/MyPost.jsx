@@ -1,25 +1,32 @@
 import React from 'react';
 import Post from './Post/Post';
-
-const MyPost = () => {
-    const postData = [
-        {id:1, message:'Hi how are you', likesCount: 12},
-        {id:2, message:'this is my first post', likesCount: 2}           
-    ];
+import s from './MyPost.module.css';
+const MyPost = (props) => {
+    const postElements = props.postsData.map( el => {
+        return <Post message={el.message} likesCount={el.likesCount}/>
+    });
+    const newPostElement = React.createRef();
+    const addPost = () => {
+        const text = newPostElement.current.value;
+        props.addPost(text);
+    };
     return (
         <div>
-            <div className="container">
-                <img src="" alt="avatar" />
-                <textarea className="text"></textarea>
-                <button>New post</button>
-                <div className="icon">
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
+            <div className={s.container}>
+                <div className={s.item}>
+                    <img src="" alt="avatar" className={ s.img }/>
+                    <textarea className={s.text} placeholder="New post" ref={newPostElement}></textarea>
+                </div>
+                <div className={s.item}>
+                    <button className={s.btn} onClick={addPost}>create post</button>
+                    <div className={s.icon}>
+                        <img src="" alt="icon"/>
+                        <img src="" alt="icon"/>
+                        <img src="" alt="icon"/>
+                    </div>
                 </div>
             </div>
-            <Post message={postData[0].message} likesCount={postData[0].likesCount}/>
-            <Post message={postData[1].message} likesCount={postData[1].likesCount}/>
+            {postElements}
         </div>
     )
 }

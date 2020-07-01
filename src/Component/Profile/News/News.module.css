@@ -4,8 +4,9 @@ h2 {
     font-weight: normal;
 }
 .news {
+    padding: 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .itemWrapper {
     display: flex;

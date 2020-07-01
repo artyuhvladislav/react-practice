@@ -18,11 +18,15 @@ body {
   background:#2c2c6a;
   color: #fff;
 }
-
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 .app-wrapper {
   display: grid;
   grid-template-columns:200px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 100px 210px 1fr;
  grid-template-areas: "header header"
                       "nav profile";
 }
@@ -30,6 +34,7 @@ body {
 .app-wrapper-content {
   background: #1c1e48;
   grid-area: "profile";
+  grid-row: 2/4;
   border-top-left-radius: 5px;
 }
 

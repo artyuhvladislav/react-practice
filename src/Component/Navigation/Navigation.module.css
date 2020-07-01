@@ -1,7 +1,7 @@
 .nav {
     background: #2c2c6a;
     color: #fff;
-    
+    grid-row: 2/3;
 }
 li {
     width: 100%;
