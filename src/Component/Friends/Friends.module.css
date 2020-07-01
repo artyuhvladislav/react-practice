@@ -1,0 +1,18 @@
+h2 {
+    font-size: 16px;
+    color: #838493;
+    padding-left: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.item {
+    border: 1px solid #000;
+}
+.img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #000;
+}

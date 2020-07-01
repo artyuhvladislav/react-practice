@@ -1,0 +1,10 @@
+
+.item {
+    border: 1px solid #000;
+}
+.img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #000;
+}
