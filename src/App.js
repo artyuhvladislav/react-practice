@@ -8,7 +8,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Friends from './Component/Friends/Friends';
 
 const App = (props) => {
-
+    
     return (
         <BrowserRouter>
             <div className="app-wrapper">
@@ -16,11 +16,7 @@ const App = (props) => {
                 <Navigation />
                 <div className="app-wrapper-content">
                     <Route path='/profile' render={ 
-                        () => < Profile 
-                            state={props.state.profilePage}
-                            addPost={props.addPost}
-                            updateNewPostText={props.updateNewPostText}/>                       
-                    } />
+                        () => < Profile state={props.state.profilePage} dispatch={props.dispatch}/>} />
                     <Route path='/dialogs' render={
                         () => < Dialogs 
                                     state={props.state.messagesPage}
@@ -28,7 +24,7 @@ const App = (props) => {
                                     updateNewMessageText={props.updateNewMessageText}/>
                     } />
                 </div>
-                <Friends friends={props.state.sideBar}/>
+                {/* <Friends friends={props.state.sideBar}/> */}
             </div>
         </BrowserRouter>
     )
