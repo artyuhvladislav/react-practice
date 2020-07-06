@@ -6,7 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import state from './redux/state';
 import {addPost} from './redux/state';
 import {addMessage} from './redux/state';
-import {updateNewPostText} from './redux/state';
+import {updateNewPostText, updateNewMessageText} from './redux/state';
+
 import { BrowserRouter } from 'react-router-dom';
 import {subscribe} from './redux/state';
 
@@ -14,7 +15,11 @@ const renderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addPost={addPost} addMessage={addMessage} updateNewPostText={updateNewPostText} />
+                <App state={state}
+                    addPost={addPost}
+                    addMessage={addMessage}
+                    updateNewPostText={updateNewPostText}
+                    updateNewMessageText = {updateNewMessageText} />
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

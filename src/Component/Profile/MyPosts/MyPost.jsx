@@ -2,7 +2,7 @@ import React from 'react';
 import Post from './Post/Post';
 import s from './MyPost.module.css';
 const MyPost = (props) => {
-
+    
     const postElements = props.postsData.map( el => {
         return <Post message={el.message} likesCount={el.likesCount}/>
     });

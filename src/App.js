@@ -16,10 +16,17 @@ const App = (props) => {
                 <Navigation />
                 <div className="app-wrapper-content">
                     <Route path='/profile' render={ 
-                        () => < Profile state={props.state.profilePage} addPost={props.addPost}
-                        updateNewPostText={props.updateNewPostText}/>                       } />
+                        () => < Profile 
+                            state={props.state.profilePage}
+                            addPost={props.addPost}
+                            updateNewPostText={props.updateNewPostText}/>                       
+                    } />
                     <Route path='/dialogs' render={
-                        () => < Dialogs state={props.state.messagesPage} addMessage={props.addMessage}/> } />
+                        () => < Dialogs 
+                                    state={props.state.messagesPage}
+                                    addMessage={props.addMessage}
+                                    updateNewMessageText={props.updateNewMessageText}/>
+                    } />
                 </div>
                 <Friends friends={props.state.sideBar}/>
             </div>

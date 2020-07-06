@@ -6,6 +6,7 @@ const state = {
                 {id:1, message:'hi'},
                 {id:2, message:'hello'}
             ],
+            newMessageText: '',
             dialogsData: [
                 {id:1, name:'Vlad'},
                 {id:2, name:'Valera'},
@@ -48,14 +49,20 @@ export const addPost = () => {
     renderEntireTree(state);
 }
 
-export const addMessage = (message) => {
-    const newMessage = {id:1, message:message};
+export const addMessage = () => {
+    const newMessage = {id:1, message:state.messagesPage.newMessageText};
+
     state.messagesPage.messagesData.push(newMessage);
+    state.messagesPage.newMessageText = '';
     renderEntireTree(state);
 }
 
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
+    renderEntireTree(state);
+}
+export const updateNewMessageText = (newText) => {
+    state.messagesPage.newMessageText = newText;
     renderEntireTree(state);
 }
 export const subscribe = (observer) => {
