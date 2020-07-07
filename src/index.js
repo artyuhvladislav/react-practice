@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import store from './redux/state';
 
 
@@ -11,10 +11,7 @@ const renderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state}
-                    dispatch={store.dispatch.bind(store)}
-                    addMessage={store.addMessage.bind(store)}
-                    updateNewMessageText = {store.updateNewMessageText.bind(store)} />
+                <App state={state} dispatch={store.dispatch.bind(store)}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

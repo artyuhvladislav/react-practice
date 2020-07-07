@@ -19,12 +19,10 @@ const App = (props) => {
                         () => < Profile state={props.state.profilePage} dispatch={props.dispatch}/>} />
                     <Route path='/dialogs' render={
                         () => < Dialogs 
-                                    state={props.state.messagesPage}
-                                    addMessage={props.addMessage}
-                                    updateNewMessageText={props.updateNewMessageText}/>
+                                    state={props.state.messagesPage} dispatch={props.dispatch}/>
                     } />
                 </div>
-                {/* <Friends friends={props.state.sideBar}/> */}
+                <Friends friends={props.state.sideBar}/>
             </div>
         </BrowserRouter>
     )

@@ -4,3 +4,10 @@
 .active {
   color: #fff;
 }
+.message {
+  border-radius: 5px;
+  padding: 10px;
+  background:#2c2c6a;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
