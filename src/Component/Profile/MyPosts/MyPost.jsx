@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post/Post';
 import s from './MyPost.module.css';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/state';
+
 
 const MyPost = (props) => {
     
@@ -9,15 +9,14 @@ const MyPost = (props) => {
         return <Post message={el.message} likesCount={el.likesCount}/>
     });
 
-    const newPostElement = React.createRef();
 
     const addPost = () => {
-        props.dispatch( addPostActionCreator() );
+        props.addPost()
     }
   
-    const onChangePostText = () => {
-        const text = newPostElement.current.value;
-        props.dispatch( updateNewPostTextActionCreator(text) );
+    const onChangePostText = (e) => {
+        const text = e.target.value;
+        props.onChangePostText(text)
     }
     
     return (
@@ -25,7 +24,7 @@ const MyPost = (props) => {
             <div className={s.container}>
                 <div className={s.item}>
                     <img src="" alt="avatar" className={ s.img }/>
-                    <textarea className={s.text} placeholder="New post" value={props.newPostText} ref={newPostElement} onChange={onChangePostText}/>
+                    <textarea className={s.text} placeholder="New post" value={props.newPostText} onChange={onChangePostText}/>
                 </div>
                 <div className={s.item}>
                     <button className={s.btn} onClick={addPost}>create post</button>
