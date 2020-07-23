@@ -5,13 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/redux-store';
+import { Provider } from 'react-redux';
 
 
 const renderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} dispatch={store.dispatch.bind(store)} store={store}/> 
+                <Provider store = {store}>
+                    <App /> 
+                </Provider>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

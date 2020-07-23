@@ -16,11 +16,11 @@ const App = (props) => {
                 <Navigation />
                 <div className="app-wrapper-content">
                     <Route path='/profile' render={ 
-                        () => < Profile store={props.store} state={props.state.profilePage}/>} />
+                        () => < Profile />} />
                     <Route path='/dialogs' render={
-                        () => < DialogsContainer store={props.store}/> } />
+                        () => < DialogsContainer /> } />
                 </div>
-                <Friends friends={props.state.sideBar} />
+                {/* <Friends friends={props.state.sideBar} /> */}
             </div>
         </BrowserRouter>
     )
