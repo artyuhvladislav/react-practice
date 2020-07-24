@@ -1,5 +1,4 @@
 import React from 'react';
-import News from './News/News';
 import s from './Profile.module.css'
 import MyPostContainer from './MyPosts/MyPostContainer';
 import NewsContainer from './News/NewsContainer';

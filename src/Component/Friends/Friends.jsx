@@ -3,9 +3,9 @@ import s from './Friends.module.css';
 import FriendsItem from './FriendsItem/FriendsItem';
 
 const Friends = (props) => {
-
-    const friendsElements = props.friends.users.map( el => {
-        return <FriendsItem user={el.name} id={el.id}/>
+    debugger;
+    const friendsElements = props.users.map( el => {
+        return <FriendsItem user={el.name} key = {el.id} id={el.id}/>
     });
     return (
         <div>

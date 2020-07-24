@@ -12,7 +12,7 @@ const NewsItem = (props) => {
 
 const News = (props) => {
     const newsItemElements = props.newsData.map( el => {
-        return <NewsItem className={s.link} title={el.title} id={el.id}/>
+        return <NewsItem className={s.link} title={el.title} key = {el.id} id={el.id}/>
     });
     return (
         <div>   

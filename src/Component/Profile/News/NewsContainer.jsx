@@ -1,6 +1,4 @@
 import React from 'react';
-import s from './News.module.css';
-import { NavLink } from 'react-router-dom';
 import News from './News';
 import { connect } from 'react-redux';
 
@@ -22,7 +20,7 @@ import { connect } from 'react-redux';
 // }
 const mapStateToProps = (state) => {
     return {
-        newsData: state.profilePage.newsData
+        newsData: state.newsPage.newsData
     }
 }
 const mapDispatchToProps = (dispatch) => {
