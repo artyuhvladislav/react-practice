@@ -4,27 +4,27 @@ const SET_USERS = 'SET-USERS';
 
 const initialState = {
     users: [
-        {   id: 1,
-            fullName: 'Ivan',
-            usersPhoto: '#',
-            location: { country: 'Belarus', place: 'Minsk'},
-            status: 'some text here',
-            followed: true
-        },
-        {   id: 2,
-            fullName: 'Sanay',
-            usersPhoto: '#',
-            location: { country: 'Belarus', place: 'Grodno'},
-            status: 'some text here',
-            followed: false
-        },
-        {   id: 3,
-            fullName: 'Masha',
-            usersPhoto: '#',
-            location: { country: 'Belarus', place: 'Vitebsk'},
-            status: 'some text here',
-            followed: false
-        }
+        // {   id: 1,
+        //     fullName: 'Ivan',
+        //     usersPhoto: '#',
+        //     location: { country: 'Belarus', place: 'Minsk'},
+        //     status: 'some text here',
+        //     followed: true
+        // },
+        // {   id: 2,
+        //     fullName: 'Sanay',
+        //     usersPhoto: '#',
+        //     location: { country: 'Belarus', place: 'Grodno'},
+        //     status: 'some text here',
+        //     followed: false
+        // },
+        // {   id: 3,
+        //     fullName: 'Masha',
+        //     usersPhoto: '#',
+        //     location: { country: 'Belarus', place: 'Vitebsk'},
+        //     status: 'some text here',
+        //     followed: false
+        // }
     ],
 
 }
@@ -35,7 +35,7 @@ const usersReducer  = (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.map( u => {
-                    if(u.followed) {
+                    if(u.id === action.userId) {
                         return {
                             ...u,
                             followed: true
@@ -48,7 +48,7 @@ const usersReducer  = (state = initialState, action) => {
                 return {
                     ...state,
                     users: state.users.map( u => {
-                        if(u.followed) {
+                        if(u.id === action.userId) {
                             return {
                                 ...u,
                                 followed: false

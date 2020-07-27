@@ -4,10 +4,10 @@ import Header from './Component/Header/Header';
 import Profile from './Component/Profile/Profile';
 import Navigation from './Component/Navigation/Navigation';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Friends from './Component/Friends/Friends';
 import DialogsContainer from './Component/Dialogs/DialogsContainer';
 import UsersContainer from './Component/Users/UsersContainer';
 import FriendsContainer from './Component/Friends/FriendsContainer';
+import MusicContainer from './Component/Music/MusicContainer';
 
 const App = (props) => {
     
@@ -23,6 +23,8 @@ const App = (props) => {
                         () => < DialogsContainer /> } />
                     <Route path='/users' render={
                         () => < UsersContainer /> } />
+                    <Route path='/music' render={
+                        () => < MusicContainer /> } />
                 </div>
                 <FriendsContainer  />
             </div>
