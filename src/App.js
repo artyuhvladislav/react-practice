@@ -17,14 +17,10 @@ const App = (props) => {
                 <Header />
                 <Navigation />
                 <div className="app-wrapper-content">
-                    <Route path='/profile' render={ 
-                        () => < Profile />} />
-                    <Route path='/dialogs' render={
-                        () => < DialogsContainer /> } />
-                    <Route path='/users' render={
-                        () => < UsersContainer /> } />
-                    <Route path='/music' render={
-                        () => < MusicContainer /> } />
+                    <Route path='/profile' render={() => < Profile /> }/>
+                    <Route path='/dialogs' render={() => < DialogsContainer /> }/>
+                    <Route path='/users' render={() => < UsersContainer /> }/>
+                    <Route path='/music' render={() => < MusicContainer /> }/>
                 </div>
                 <FriendsContainer  />
             </div>
