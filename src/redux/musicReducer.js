@@ -56,6 +56,6 @@ const musicReducer = (state = initialState, action) => {
             return state
     }
 }
-export const addMusicAC = (musicId) => ({type: ADD_MUSIC, musicId});
-export const deleteMusicAC = (musicId) => ({type: DELETE_MUSIC, musicId});
+export const addMusic = (musicId) => ({type: ADD_MUSIC, musicId});
+export const deleteMusic = (musicId) => ({type: DELETE_MUSIC, musicId});
 export default musicReducer;

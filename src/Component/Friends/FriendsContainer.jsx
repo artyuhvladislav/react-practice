@@ -3,14 +3,10 @@ import Friends from './Friends'
 
 const mapStateToProps = (state) => {
     return {
-        users: state.sideBar.users
+        users: state.friendsPage.users
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        
-    }
-}
-const FriendsContainer = connect(mapStateToProps, mapDispatchToProps)(Friends)
+
+const FriendsContainer = connect(mapStateToProps, {})(Friends)
 
 export default FriendsContainer

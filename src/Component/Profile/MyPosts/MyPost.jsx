@@ -16,7 +16,7 @@ const MyPost = (props) => {
   
     const onChangePostText = (e) => {
         const text = e.target.value;
-        props.onChangePostText(text)
+        props.updateNewPostText(text)
     }
     
     return (

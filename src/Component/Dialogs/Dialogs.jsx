@@ -21,7 +21,7 @@ const Dialogs = (props) => {
 
     const onChangeMessageText = (e) => {
         const text = e.target.value;
-        props.onChangeMessageText(text);
+        props.updateNewMessageText(text);
     }
 
 

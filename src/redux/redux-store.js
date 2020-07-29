@@ -1,7 +1,7 @@
 import {createStore, combineReducers} from 'redux';
 import profileReducer from './profileReducer';
 import messageReducer from './messageReducer';
-import sideBarReducer from './sideBarReducer';
+import friendsReducer from './friendsReducer';
 import usersReducer from './usersReducer';
 import newsReducer from './newsReducer';
 import musicReducer from './musicReducer';
@@ -10,7 +10,7 @@ const reducers = combineReducers({
     profilePage: profileReducer,
     newsPage: newsReducer,
     messagesPage: messageReducer,
-    sideBar: sideBarReducer,
+    friendsPage: friendsReducer,
     usersPage: usersReducer,
     musicPage: musicReducer
 });

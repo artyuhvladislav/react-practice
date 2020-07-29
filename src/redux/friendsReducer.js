@@ -6,9 +6,9 @@ const initialState = {
     ]
 }
 
-const sideBarReducer = (state = initialState, action) => {
+const friendsReducer = (state = initialState, action) => {
     
 
     return state;
 }
-export default sideBarReducer
+export default friendsReducer
