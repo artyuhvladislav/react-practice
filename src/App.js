@@ -8,6 +8,7 @@ import UsersContainer from './Component/Users/UsersContainer';
 import FriendsContainer from './Component/Friends/FriendsContainer';
 import MusicContainer from './Component/Music/MusicContainer';
 import ProfileContainer from './Component/Profile/ProfileContainer';
+import NewsContainer from './Component/Profile/News/NewsContainer';
 
 const App = (props) => {
     
@@ -17,7 +18,8 @@ const App = (props) => {
                 <Header />
                 <Navigation />
                 <div className="app-wrapper-content">
-                    <Route path='/profile' render={() => < ProfileContainer /> }/>
+                    <Route path='/profile/:userId?' render={() => < ProfileContainer /> }/>
+                    <Route path='/news' render={() => <NewsContainer />}/>
                     <Route path='/dialogs' render={() => < DialogsContainer /> }/>
                     <Route path='/users' render={() => < UsersContainer /> }/>
                     <Route path='/music' render={() => < MusicContainer /> }/>

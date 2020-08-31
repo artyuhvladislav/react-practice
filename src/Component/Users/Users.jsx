@@ -12,7 +12,7 @@ const User = (props) => {
         }
     return (
         <div>
-                <div>
+                <div style={{display: 'flex'}}>
                     {pages.map(p => <span key={p} onClick = {() => {props.onPageChanged(p)}} className={props.currentPage === p ? s.selected : undefined}>{p}</span>)}            
                 </div>
                 {
