@@ -1,20 +1,17 @@
-import React from 'react';
-
-const Post = () => {
-    return (
-        <div className="container">
-            <div className="user"></div>
-            <p className="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Eius id magni repellendus impedit ut voluptatem,
-                doloremque labore officiis dicta hic distinctio nulla
-                ratione veritatis et quis odit provident libero necessitatibus!
-            </p>
-            <div className="icon">
-                <img src="" alt=""/>
-                <img src="" alt=""/>
-                <img src="" alt=""/>
-            </div>
-        </div>
-    )
-}
-export default Post
+import React from "react";
+import s from "./Post.module.css";
+const Post = (props) => {
+  return (
+    <div className={s.container}>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc96kcLicYy25CFi7P_ocMargwSC_vjRxIMg&usqp=CAU"
+        alt="avatar"
+      />
+      <p className="text">
+        {props.message}
+      </p>
+      <span>Likes {props.likesCount}</span>
+    </div>
+  );
+};
+export default Post;

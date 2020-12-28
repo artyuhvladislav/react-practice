@@ -1,6 +1,4 @@
-.profile {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 4fr;
-    background: #2c2c6a;
+.container img {
+    width: 50px;
+    border-radius: 50%;
 }
