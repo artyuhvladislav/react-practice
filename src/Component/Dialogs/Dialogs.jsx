@@ -1,25 +1,22 @@
-import React from 'react';
-import s from './Dialogs.module.css';
-import DialogItem from './DialogItem/DialogItem';
-const Message = (props) => {
-    return (
-        <div className={s.message}>{props.message}</div>
-    )
-}
-const Dialogs = (props) => {
-    return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItem}>
-                <DialogItem name="Vladislav" id="1"/>
-                <DialogItem name="Petr" id="2"/>
-                <DialogItem name="Ivan" id="3"/>
-            </div>
-            <div className={s.messages}>
-                <Message message="Hi how r u"/>
-                <Message message="Ok thx"/>
-            </div>
-        </div>
+import React from "react";
+import s from "./Dialogs.module.css";
+import DialogItem from "./DialogItem/DialogItem";
+import MessageItem from "./MessageItem/MessageItem";
+import { dialogsData, messagesData } from "../../index";
 
-    )
-}
-export default Dialogs
+const Dialogs = (props) => {
+  const dialogsElements = dialogsData.map((item) => {
+    return <DialogItem name={item.name} id={item.id} />;
+  });
+  const messagesElements = messagesData.map((item) => {
+    return <MessageItem message={item.message} />;
+  });
+
+  return (
+    <div className={s.dialogs}>
+      <div className={s.dialogsItems}>{dialogsElements}</div>
+      <div className={s.messagesItems}>{messagesElements}</div>
+    </div>
+  );
+};
+export default Dialogs;
