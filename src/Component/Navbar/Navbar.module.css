@@ -7,3 +7,10 @@
 .link.active {
     color: lightblue;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background:orange;
+    grid-gap: 10px;
+}

@@ -6,11 +6,18 @@
   display: grid;
   background: purple;
 }
+.dialogsItem {
+  margin-bottom: 30px;
+}
 .dialog {
   color: #fff;
 }
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 .active {
-  background:red;
 }
 .activeLink {
   color: #838493;

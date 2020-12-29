@@ -13,9 +13,10 @@ body {
 .app-wrapper {
   display: grid;
   grid-template-columns: 2fr 10fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 100px 100px 1fr;
   grid-template-areas: "header header"
-                        "navbar profile";
+                        "navbar profile"
+                        "friends profile";
   grid-gap: 20px;
 }
 
