@@ -5,7 +5,7 @@ const Profile = (props) => {
     return (
         <div className="profile">
             <ProfileInfo />
-            <MyPost postsData={props.state.postsData}/>
+            <MyPost state={props.state} dispatch={props.dispatch} />
         </div>
     )
 }
