@@ -1,6 +1,11 @@
 import React from "react";
+import { deletePostsAC } from "../../../../redux/state";
 import s from "./Post.module.css";
 const Post = (props) => {
+  const deletePost = () => {
+    alert(props.id)
+    props.dispatch(deletePostsAC(props.id))
+  }
   return (
     <div className={s.container}>
       <img
@@ -10,7 +15,9 @@ const Post = (props) => {
       <p className="text">
         {props.message}
       </p>
+      <p>{props.id}</p>
       <span>Likes {props.likesCount}</span>
+      <button onClick={deletePost}>delete</button>
     </div>
   );
 };

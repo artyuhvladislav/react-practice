@@ -1,3 +1,7 @@
+.container {
+    background: orange;
+    margin: 10px;
+}
 .container img {
     width: 50px;
     border-radius: 50%;

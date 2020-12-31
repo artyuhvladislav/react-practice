@@ -8,13 +8,13 @@ const MyPost = (props) => {
   const addPost = () => {
     props.dispatch(addPostsAC());
   };
-  
+
   const updateNewPostText = () => {
     props.dispatch(updateNewPostTextAC(postMessage.current.value));
   };
 
-  const postsElements = props.state.postsData.map((item) => {
-    return <Post message={item.message} likesCount={item.likesCount} />;
+  const postsElements = props.state.postsData.map((item, id) => {
+    return <Post dispatch={props.dispatch} message={item.message} likesCount={item.likesCount} id={id}/>;
   });
 
   return (
