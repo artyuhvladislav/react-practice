@@ -1,5 +1,5 @@
 import React from "react";
-import { deletePostsAC } from "../../../../redux/state";
+import { deletePostsAC } from "../../../../redux/profileReducer";
 import s from "./Post.module.css";
 const Post = (props) => {
   const deletePost = () => {

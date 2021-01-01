@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import { addPostsAC, updateNewPostTextAC } from "../../../redux/state";
+import { addPostsAC, updateNewPostTextAC } from "../../../redux/profileReducer";
 import Post from "./Post/Post";
 
 const MyPost = (props) => {

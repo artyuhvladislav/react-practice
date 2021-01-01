@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import { addFriendAC, updateNewFriendNameAC } from "../../redux/state";
+import { addFriendAC, updateNewFriendNameAC } from "../../redux/friendReducer";
 import FriendItem from "./FriendItem/FriendItem";
 import s from "./Friends.module.css";
 const Friends = (props) => {
@@ -10,8 +10,10 @@ const Friends = (props) => {
     props.dispatch(updateNewFriendNameAC(friend.current.value));
   };
   const friend = createRef();
-  const friendsElements = props.state.friendsData.map((item) => {
-    return <FriendItem name={item.name} id={item.id} />;
+  const friendsElements = props.state.friendsData.map((item, index) => {
+    return (
+      <FriendItem dispatch={props.dispatch} name={item.name} id={index} />
+    );
   });
 
   return (

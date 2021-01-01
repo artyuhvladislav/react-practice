@@ -1,7 +1,11 @@
 import React from "react";
+import { deleteFriendAC } from "../../../redux/friendReducer";
 import s from "./FriendItem.module.css";
 
 const FriendItem = (props) => {
+  const deleteFriend = () => {
+    props.dispatch(deleteFriendAC(props.id));
+  };
   return (
     <div className={s.item}>
       <img
@@ -10,6 +14,7 @@ const FriendItem = (props) => {
       />
       <p>{props.name}</p>
       <p>{props.id}</p>
+      <button onClick={deleteFriend}>delete</button>
     </div>
   );
 };
